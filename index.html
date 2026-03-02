@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Tecstryde – We build stunning, high-performance websites for ambitious businesses. Your growth starts here."/>
+  <title>Tecstryde | Premier Web Development Agency</title>
+  <link rel="stylesheet" href="assets/css/global.css"/>
+  <link rel="stylesheet" href="assets/css/home.css"/>
+  <link rel="icon" href="assets/images/logo.png"/>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-logo">Tec<span>Stryde</span></div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  <p style="color:var(--text-muted);font-size:0.8rem;letter-spacing:1.5px;">LOADING...</p>
+</div>
+
+<!-- CURSOR -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- PARTICLES -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- BACK TO TOP -->
+<button id="back-top" aria-label="Back to top">↑</button>
+
+<!-- OVERLAY -->
+<div id="overlay"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">
+    <img src="assets/images/logo.png" alt="Tecstryde"/>
+    Tec<span>Stryde</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="pages/about.html">About</a>
+    <a href="pages/services.html">Services</a>
+    <a href="pages/works.html">Works</a>
+    <a href="pages/reviews.html">Reviews</a>
+    <a href="pages/blog.html">Blog</a>
+    <a href="pages/pricing.html">Pricing</a>
+    <a href="pages/contact.html" class="nav-cta">Contact Us</a>
+  </div>
+  <div class="nav-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<nav id="mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="pages/about.html">About</a>
+  <a href="pages/services.html">Services</a>
+  <a href="pages/works.html">Works</a>
+  <a href="pages/reviews.html">Reviews</a>
+  <a href="pages/blog.html">Blog</a>
+  <a href="pages/pricing.html">Pricing</a>
+  <a href="pages/contact.html">Contact Us</a>
+</nav>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="glow-orb orb-blue hero-orb-1" style="width:500px;height:500px;top:5%;left:2%;"></div>
+  <div class="glow-orb orb-purple hero-orb-2" style="width:400px;height:400px;bottom:5%;right:3%;"></div>
+  <div class="hero-3d-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+    <div class="shape shape-4"></div>
+  </div>
+  <div class="hero-content" data-parallax="0.15">
+    <div class="hero-badge"><span class="dot"></span> Web Design & Development Agency</div>
+    <h1 class="hero-title">
+      We Build Websites<br/>
+      <span class="line-2">That Drive Results.</span>
+    </h1>
+    <p class="hero-sub">TecStryde crafts ultra-fast, stunning digital experiences for businesses who refuse to settle for ordinary. More traffic. More leads. More growth.</p>
+    <div class="hero-actions">
+      <a href="pages/works.html" class="btn btn-primary">View Our Work ↗</a>
+      <a href="pages/contact.html" class="btn btn-outline">Start a Project</a>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <div class="scroll-mouse"></div>
+    Scroll to explore
+  </div>
+</section>
+
+<!-- ══════════ MARQUEE ══════════ -->
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <span class="marquee-item">Web Design</span>
+    <span class="marquee-item">UI / UX Design</span>
+    <span class="marquee-item">3D Animations</span>
+    <span class="marquee-item">E-Commerce</span>
+    <span class="marquee-item">SEO Optimization</span>
+    <span class="marquee-item">Real Estate Websites</span>
+    <span class="marquee-item">Portfolio Sites</span>
+    <span class="marquee-item">Branding</span>
+    <span class="marquee-item">Web Design</span>
+    <span class="marquee-item">UI / UX Design</span>
+    <span class="marquee-item">3D Animations</span>
+    <span class="marquee-item">E-Commerce</span>
+    <span class="marquee-item">SEO Optimization</span>
+    <span class="marquee-item">Real Estate Websites</span>
+    <span class="marquee-item">Portfolio Sites</span>
+    <span class="marquee-item">Branding</span>
+  </div>
+</div>
+
+<!-- ══════════ STATS ══════════ -->
+<section id="stats">
+  <div class="section-header center reveal">
+    <div class="section-tag">By the Numbers</div>
+    <h2 class="section-title">Trusted by <span>Growing Businesses</span></h2>
+  </div>
+  <div class="stats-grid" data-stagger>
+    <div class="glass-card stat-card" data-tilt>
+      <div class="stat-icon">🚀</div>
+      <div class="stat-num"><span data-target="50">0</span>+</div>
+      <div class="stat-label">Projects Delivered</div>
+    </div>
+    <div class="glass-card stat-card" data-tilt>
+      <div class="stat-icon">😊</div>
+      <div class="stat-num"><span data-target="40">0</span>+</div>
+      <div class="stat-label">Happy Clients</div>
+    </div>
+    <div class="glass-card stat-card" data-tilt>
+      <div class="stat-icon">⚡</div>
+      <div class="stat-num"><span data-target="98">0</span>%</div>
+      <div class="stat-label">Client Satisfaction</div>
+    </div>
+    <div class="glass-card stat-card" data-tilt>
+      <div class="stat-icon">🏆</div>
+      <div class="stat-num"><span data-target="3">0</span>+</div>
+      <div class="stat-label">Years of Excellence</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SERVICES PREVIEW ══════════ -->
+<section id="services-preview">
+  <div class="section-header reveal">
+    <div class="section-tag">What We Do</div>
+    <h2 class="section-title">Services Built for <span>Modern Business</span></h2>
+    <p class="section-sub">From pixel-perfect design to blazing-fast performance — we handle it all so you can focus on growing.</p>
+  </div>
+  <div class="services-preview-grid" data-stagger>
+    <div class="glass-card srv-card" data-tilt>
+      <div class="srv-icon">🎨</div>
+      <h3>UI / UX Design</h3>
+      <p>Conversion-focused interfaces that look incredible and feel intuitive. We design experiences users love.</p>
+      <a href="pages/services.html" class="learn-more">Learn more →</a>
+    </div>
+    <div class="glass-card srv-card" data-tilt>
+      <div class="srv-icon">💻</div>
+      <h3>Web Development</h3>
+      <p>Lightning-fast, SEO-ready websites built with clean code and modern frameworks. No bloat, just results.</p>
+      <a href="pages/services.html" class="learn-more">Learn more →</a>
+    </div>
+    <div class="glass-card srv-card" data-tilt>
+      <div class="srv-icon">🏪</div>
+      <h3>E-Commerce Stores</h3>
+      <p>From product discovery to checkout — we build online stores that convert visitors into loyal customers.</p>
+      <a href="pages/services.html" class="learn-more">Learn more →</a>
+    </div>
+    <div class="glass-card srv-card" data-tilt>
+      <div class="srv-icon">📈</div>
+      <h3>SEO & Performance</h3>
+      <p>Google-friendly architecture, Core Web Vitals optimization, and speed that ensures you rank and retain.</p>
+      <a href="pages/services.html" class="learn-more">Learn more →</a>
+    </div>
+    <div class="glass-card srv-card" data-tilt>
+      <div class="srv-icon">🏠</div>
+      <h3>Real Estate Websites</h3>
+      <p>Property listing sites with modern design, lead capture forms, and seamless property search experiences.</p>
+      <a href="pages/services.html" class="learn-more">Learn more →</a>
+    </div>
+    <div class="glass-card srv-card" data-tilt>
+      <div class="srv-icon">✨</div>
+      <h3>3D & Animation</h3>
+      <p>Jaw-dropping Three.js and GSAP animations that make your brand unforgettable and engagement skyrocket.</p>
+      <a href="pages/services.html" class="learn-more">Learn more →</a>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:3rem;">
+    <a href="pages/services.html" class="btn btn-outline">All Services →</a>
+  </div>
+</section>
+
+<!-- ══════════ WORKS PREVIEW ══════════ -->
+<section id="works-preview" style="background:var(--bg-secondary);">
+  <div class="section-header center reveal">
+    <div class="section-tag">Our Portfolio</div>
+    <h2 class="section-title">Real Projects. <span>Real Results.</span></h2>
+    <p class="section-sub">Each project we take on becomes a story of transformation. Here are a few recent highlights.</p>
+  </div>
+  <div class="works-preview-grid" data-stagger>
+    <a href="https://real-estate-h7rl.vercel.app" target="_blank" class="work-card">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" alt="Real Estate" />
+      <div class="work-overlay">
+        <h3>Real Estate Platform</h3>
+        <span class="chip">Property Listings</span>
+      </div>
+    </a>
+    <a href="https://athithyan123.github.io/Gym/" target="_blank" class="work-card">
+      <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop" alt="Gym" />
+      <div class="work-overlay">
+        <h3>Gym & Fitness Website</h3>
+        <span class="chip">Landing Page</span>
+      </div>
+    </a>
+    <a href="https://photo-isoy.vercel.app/" target="_blank" class="work-card">
+      <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?q=80&w=800&auto=format&fit=crop" alt="Photography" />
+      <div class="work-overlay">
+        <h3>Photography Portfolio</h3>
+        <span class="chip">Portfolio</span>
+      </div>
+    </a>
+    <a href="https://cafe-steel.vercel.app" target="_blank" class="work-card">
+      <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=800&auto=format&fit=crop" alt="Cafe" />
+      <div class="work-overlay">
+        <h3>Cafe Bonjour Website</h3>
+        <span class="chip">Restaurant</span>
+      </div>
+    </a>
+    <div class="work-card glass-card" style="display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem;">
+      <span style="font-size:2.5rem;">🔧</span>
+      <span style="color:var(--text-secondary);font-size:0.9rem;">Project in Progress</span>
+    </div>
+    <div class="work-card" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(59,130,246,0.08) 0%,rgba(124,58,237,0.08) 100%);border:1px dashed var(--border-accent);border-radius:20px;">
+      <div style="text-align:center;">
+        <p style="font-size:1.3rem;font-weight:700;">Your Project?</p>
+        <p style="color:var(--text-secondary);font-size:0.85rem;margin:0.5rem 0 1rem;">Let's build something great</p>
+        <a href="pages/contact.html" class="btn btn-primary" style="font-size:0.85rem;padding:10px 22px;">Get Started</a>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:3rem;">
+    <a href="pages/works.html" class="btn btn-outline">View All Projects →</a>
+  </div>
+</section>
+
+<!-- ══════════ CTA ══════════ -->
+<div class="cta-section reveal">
+  <div class="glow-orb orb-blue" style="width:300px;height:300px;top:-50%;left:20%;opacity:0.12;"></div>
+  <div class="glow-orb orb-purple" style="width:250px;height:250px;bottom:-30%;right:15%;opacity:0.10;"></div>
+  <h2>Ready to <span style="background:var(--accent-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Elevate</span> Your Brand?</h2>
+  <p>Tell us your vision and we'll turn it into a digital masterpiece. No fluff — just results.</p>
+  <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative;">
+    <a href="pages/contact.html" class="btn btn-primary">Start Your Project →</a>
+    <a href="pages/works.html" class="btn btn-outline">See More Work</a>
+  </div>
+</div>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo" style="font-size:1.6rem;">Tec<span>Stryde</span></div>
+      <p>Building websites that don't just look great — they perform, convert, and grow your business. Based in India, working globally.</p>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/tecstryde_?utm_source=qr&igsh=MTU2eGlkaHN6YmFhaA==" target="_blank" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.074 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.843-1.667 4.77-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.075-4.919-4.919-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.843 1.667-4.77 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://wa.me/916369690438" target="_blank" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.438 9.889-9.886.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.438-9.889 9.886-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.982zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.353-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/tecstryde-66b7923b2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="pages/about.html">About Us</a></li>
+        <li><a href="pages/works.html">Our Work</a></li>
+        <li><a href="pages/blog.html">Blog</a></li>
+        <li><a href="pages/pricing.html">Pricing</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="pages/services.html">Web Design</a></li>
+        <li><a href="pages/services.html">Development</a></li>
+        <li><a href="pages/services.html">E-Commerce</a></li>
+        <li><a href="pages/services.html">SEO & Growth</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="pages/contact.html">Get in Touch</a></li>
+        <li><a href="pages/reviews.html">Testimonials</a></li>
+        <li><a href="pages/contact.html">Request Quote</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 <span>TecStryde</span>. All rights reserved.</span>
+    <span>Made with ❤️ for ambitious brands worldwide</span>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

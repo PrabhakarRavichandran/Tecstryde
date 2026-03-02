@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="TecStryde Blog – Web design insights, SEO tips, and digital growth strategies." />
+    <title>Blog | Tecstryde</title>
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="icon" href="../assets/images/logo.png" />
+    <style>
+        .blog-hero {
+            min-height: 45vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: calc(var(--nav-h)+4rem) 5vw 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .blog-main {}
+
+        .featured-post {
+            border-radius: 24px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .featured-thumb {
+            height: 280px;
+            background: linear-gradient(135deg, #0f1e4a 0%, #1a3060 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+            position: relative;
+        }
+
+        .featured-thumb .post-badge {
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem;
+            padding: 5px 14px;
+            border-radius: 99px;
+            background: var(--accent-blue);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .featured-body {
+            padding: 2rem;
+        }
+
+        .post-meta {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 0.8rem;
+        }
+
+        .post-date {
+            color: var(--text-muted);
+            font-size: 0.78rem;
+        }
+
+        .post-read {
+            color: var(--accent-blue);
+            font-size: 0.78rem;
+            font-weight: 600;
+        }
+
+        .featured-body h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: 0.6rem;
+        }
+
+        .featured-body p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .read-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            margin-top: 1.2rem;
+            transition: gap 0.3s;
+        }
+
+        .read-btn:hover {
+            gap: 10px;
+        }
+
+        .post-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .post-item {
+            display: flex;
+            gap: 1.2rem;
+            padding: 1.2rem;
+            border-radius: 16px;
+            transition: background 0.3s;
+        }
+
+        .post-item:hover {
+            background: var(--glass);
+        }
+
+        .post-thumb-sm {
+            width: 72px;
+            height: 72px;
+            border-radius: 12px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .post-item h4 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 0.3rem;
+        }
+
+        .post-item .post-date {
+            display: block;
+            margin-top: 0.2rem;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            padding: 1.8rem;
+            border-radius: 20px;
+            margin-bottom: 1.5rem;
+        }
+
+        .sidebar-widget h4 {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-muted);
+            margin-bottom: 1.2rem;
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .newsletter-input {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-primary);
+            font-size: 0.85rem;
+            margin-bottom: 0.8rem;
+            outline: none;
+            transition: border 0.3s;
+        }
+
+        .newsletter-input:focus {
+            border-color: var(--accent-blue);
+        }
+
+        @media(max-width:1024px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .sidebar-widget { max-width: 600px; }
+        }
+
+        @media(max-width:768px) {
+            .blog-hero {
+                min-height: auto;
+                padding: calc(var(--nav-h) + 2rem) 5vw 4rem;
+            }
+            .featured-thumb { height: 220px; font-size: 4rem; }
+            .featured-body { padding: 1.5rem; }
+            .featured-body h2 { font-size: 1.3rem; }
+            .post-item { padding: 1rem; flex-direction: column; }
+            .post-thumb-sm { width: 60px; height: 60px; font-size: 1.5rem; }
+        }
+        
+        @media(max-width:480px) {
+            .featured-body h2 { font-size: 1.15rem; }
+            .sidebar-widget { padding: 1.5rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loader">
+        <div class="loader-logo">Tec<span>Stryde</span></div>
+        <div class="loader-bar">
+            <div class="loader-bar-fill"></div>
+        </div>
+    </div>
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+    <canvas id="particles-canvas"></canvas>
+    <button id="back-top">↑</button>
+    <div id="overlay"></div>
+
+    <nav id="navbar">
+        <a href="../index.html" class="nav-logo"><img src="../assets/images/logo.png"
+                alt="Tecstryde" />Tec<span>Stryde</span></a>
+        <div class="nav-links">
+            <a href="../index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+            <a href="works.html">Works</a><a href="reviews.html">Reviews</a><a href="blog.html" class="active">Blog</a>
+            <a href="pricing.html">Pricing</a><a href="contact.html" class="nav-cta">Contact Us</a>
+        </div>
+        <div class="nav-hamburger"><span></span><span></span><span></span></div>
+    </nav>
+    <nav id="mobile-nav">
+        <a href="../index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+        <a href="works.html">Works</a><a href="reviews.html">Reviews</a><a href="blog.html">Blog</a>
+        <a href="pricing.html">Pricing</a><a href="contact.html">Contact Us</a>
+    </nav>
+
+    <section class="blog-hero">
+        <div class="glow-orb orb-purple"
+            style="width:350px;height:350px;top:-10%;right:5%;opacity:0.12;position:absolute;"></div>
+        <div class="section-tag reveal">Insights & Tips</div>
+        <h1 class="section-title reveal" style="font-size:clamp(2.5rem,5vw,4rem);max-width:680px;margin-top:0.5rem;">Web
+            Design Insights<br />for <span>Growing Businesses</span></h1>
+        <p class="section-sub reveal">Stay ahead with actionable tips on web design, SEO, and digital growth strategies
+            from the TecStryde team.</p>
+    </section>
+
+    <section>
+        <div class="blog-grid">
+            <div class="blog-main">
+                <!-- Featured post -->
+                <div class="glass-card featured-post reveal">
+                    <div class="featured-thumb">
+                        🎨
+                        <span class="post-badge">Featured</span>
+                    </div>
+                    <div class="featured-body">
+                        <div class="post-meta"><span class="post-date">📅 February 20, 2025</span><span
+                                class="post-read">⏱ 5 min read</span><span class="chip"
+                                style="font-size:0.72rem;">Design</span></div>
+                        <h2>Why Your Business Website Is Losing You Customers (And How To Fix It)</h2>
+                        <p>In today's digital-first world, your website is your #1 salesperson. If it's slow, outdated,
+                            or hard to navigate — you're actively pushing potential customers to your competitors.
+                            Here's what you're doing wrong and how to fix it fast.</p>
+                        <a href="#" class="read-btn">Read Article →</a>
+                    </div>
+                </div>
+
+                <!-- Post list -->
+                <div class="post-list" data-stagger>
+                    <div class="glass-card post-item">
+                        <div class="post-thumb-sm" style="background:rgba(59,130,246,0.1);">📈</div>
+                        <div>
+                            <div class="post-meta"><span class="chip" style="font-size:0.7rem;">SEO</span><span
+                                    class="post-date">Jan 15, 2025</span></div>
+                            <h4>5 SEO Mistakes That Are Killing Your Website Rankings</h4>
+                            <a href="#" class="read-btn" style="font-size:0.8rem;">Read More →</a>
+                        </div>
+                    </div>
+                    <div class="glass-card post-item">
+                        <div class="post-thumb-sm" style="background:rgba(124,58,237,0.1);">⚡</div>
+                        <div>
+                            <div class="post-meta"><span class="chip" style="font-size:0.7rem;">Performance</span><span
+                                    class="post-date">Jan 8, 2025</span></div>
+                            <h4>How Page Speed Affects Your Google Rankings and Conversions</h4>
+                            <a href="#" class="read-btn" style="font-size:0.8rem;">Read More →</a>
+                        </div>
+                    </div>
+                    <div class="glass-card post-item">
+                        <div class="post-thumb-sm" style="background:rgba(6,182,212,0.1);">✨</div>
+                        <div>
+                            <div class="post-meta"><span class="chip" style="font-size:0.7rem;">Animation</span><span
+                                    class="post-date">Dec 28, 2024</span></div>
+                            <h4>The Psychology of Web Animations: How Motion Drives Conversions</h4>
+                            <a href="#" class="read-btn" style="font-size:0.8rem;">Read More →</a>
+                        </div>
+                    </div>
+                    <div class="glass-card post-item">
+                        <div class="post-thumb-sm" style="background:rgba(59,130,246,0.1);">📱</div>
+                        <div>
+                            <div class="post-meta"><span class="chip" style="font-size:0.7rem;">Design</span><span
+                                    class="post-date">Dec 15, 2024</span></div>
+                            <h4>Mobile-First Design: Why 60% of Your Traffic Needs You to Prioritize It</h4>
+                            <a href="#" class="read-btn" style="font-size:0.8rem;">Read More →</a>
+                        </div>
+                    </div>
+                    <div class="glass-card post-item">
+                        <div class="post-thumb-sm" style="background:rgba(124,58,237,0.1);">🏠</div>
+                        <div>
+                            <div class="post-meta"><span class="chip" style="font-size:0.7rem;">Real Estate</span><span
+                                    class="post-date">Dec 5, 2024</span></div>
+                            <h4>Real Estate Websites That Convert: 7 Must-Have Features for 2025</h4>
+                            <a href="#" class="read-btn" style="font-size:0.8rem;">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="reveal-right">
+                <div class="glass-card sidebar-widget">
+                    <h4>Newsletter</h4>
+                    <p style="color:var(--text-secondary);font-size:0.85rem;margin-bottom:1rem;">Get weekly tips on web
+                        design, SEO, and digital growth delivered to your inbox.</p>
+                    <input class="newsletter-input" type="email" placeholder="Your email address" />
+                    <button class="btn btn-primary"
+                        style="width:100%;justify-content:center;font-size:0.85rem;padding:12px;">Subscribe →</button>
+                </div>
+                <div class="glass-card sidebar-widget">
+                    <h4>Topics</h4>
+                    <div class="tag-cloud">
+                        <span class="chip" style="cursor:default;">Web Design</span>
+                        <span class="chip" style="cursor:default;">SEO</span>
+                        <span class="chip" style="cursor:default;">Performance</span>
+                        <span class="chip" style="cursor:default;">E-Commerce</span>
+                        <span class="chip" style="cursor:default;">Animation</span>
+                        <span class="chip" style="cursor:default;">Mobile</span>
+                        <span class="chip" style="cursor:default;">Real Estate</span>
+                        <span class="chip" style="cursor:default;">Branding</span>
+                    </div>
+                </div>
+                <div class="glass-card sidebar-widget" style="text-align:center;">
+                    <div style="font-size:2.5rem;margin-bottom:1rem;">🚀</div>
+                    <h4
+                        style="font-size:0.95rem;text-transform:none;letter-spacing:0;color:var(--text-primary);margin-bottom:0.5rem;">
+                        Ready to grow online?</h4>
+                    <p style="color:var(--text-secondary);font-size:0.83rem;margin-bottom:1rem;">Let's build your dream
+                        website today.</p>
+                    <a href="contact.html" class="btn btn-primary"
+                        style="font-size:0.82rem;padding:10px 20px;justify-content:center;width:100%;">Get a Free
+                        Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="nav-logo" style="font-size:1.6rem;">Tec<span>Stryde</span></div>
+                <p>Building websites that perform, convert, and grow your business.</p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/tecstryde_?utm_source=qr&igsh=MTU2eGlkaHN6YmFhaA==" target="_blank" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.074 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.843-1.667 4.77-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.075-4.919-4.919-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.843 1.667-4.77 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://wa.me/916369690438" target="_blank" aria-label="WhatsApp">
+                        <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.438 9.889-9.886.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.438-9.889 9.886-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.982zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.353-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/tecstryde-66b7923b2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="works.html">Our Work</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="services.html">Web Design</a></li>
+                    <li><a href="services.html">Development</a></li>
+                    <li><a href="services.html">E-Commerce</a></li>
+                    <li><a href="services.html">SEO</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="contact.html">Get in Touch</a></li>
+                    <li><a href="reviews.html">Testimonials</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom"><span>© 2025 <span>TecStryde</span>. All rights reserved.</span></div>
+    </footer>
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
