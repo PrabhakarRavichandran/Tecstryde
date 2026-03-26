@@ -1,16 +1,67 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://tecstryde-protfolio.vercel.app/</loc>
-  </url>
-
-  <url>
-    <loc>https://tecstryde-protfolio.vercel.app/pages/about.html</loc>
-  </url>
-
-  <url>
-    <loc>https://tecstryde-protfolio.vercel.app/pages/contact.html</loc>
-  </url>
-
+<?xml version="1.0" encoding="UTF-8"?> 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
+<url>
+  <loc>http://tecstryde-protfolio.vercel.app/index.html</loc>
+  <lastmod>2026-03-26</lastmod>
+</url>
+<url>
+  <loc>http://tecstryde-protfolio.vercel.app/pages/about.html</loc>
+  <lastmod>2026-03-26</lastmod>
+</url>
+<url>
+  <loc>http://tecstryde-protfolio.vercel.app/pages/services.html</loc>
+  <lastmod>2026-03-26</lastmod>
+</url>
+<url>
+  <loc>http://tecstryde-protfolio.vercel.app/pages/works.html</loc>
+  <lastmod>2026-03-26</lastmod>
+</url>
+<url>
+  <loc>http://tecstryde-protfolio.vercel.app/pages/reviews.html</loc>
+  <lastmod>2026-03-26</lastmod>
+</url>
+<url>
+  <loc>http://tecstryde-protfolio.vercel.app/pages/blog.html</loc>
+  <lastmod>2026-03-26</lastmod>
+</url>
+<url>
+  <loc>http://tecstryde-protfolio.vercel.app/pages/pricing.html</loc>
+  <lastmod>2026-03-26</lastmod>
+</url>
+<url>
+  <loc>http://tecstryde-protfolio.vercel.app/pages/contact.html</loc>
+  <lastmod>2026-03-26</lastmod>
+</url>
+<url>
+  <loc>http://tecstryde-protfolio.vercel.app/../index.html</loc>
+  <lastmod>2026-03-26</lastmod>
+</url>
+<url>
+  <loc>http://tecstryde-protfolio.vercel.app/about.html</loc>
+  <lastmod>2026-03-26</lastmod>
+</url>
+<url>
+  <loc>http://tecstryde-protfolio.vercel.app/services.html</loc>
+  <lastmod>2026-03-26</lastmod>
+</url>
+<url>
+  <loc>http://tecstryde-protfolio.vercel.app/works.html</loc>
+  <lastmod>2026-03-26</lastmod>
+</url>
+<url>
+  <loc>http://tecstryde-protfolio.vercel.app/reviews.html</loc>
+  <lastmod>2026-03-26</lastmod>
+</url>
+<url>
+  <loc>http://tecstryde-protfolio.vercel.app/blog.html</loc>
+  <lastmod>2026-03-26</lastmod>
+</url>
+<url>
+  <loc>http://tecstryde-protfolio.vercel.app/pricing.html</loc>
+  <lastmod>2026-03-26</lastmod>
+</url>
+<url>
+  <loc>http://tecstryde-protfolio.vercel.app/contact.html</loc>
+  <lastmod>2026-03-26</lastmod>
+</url>
 </urlset>
